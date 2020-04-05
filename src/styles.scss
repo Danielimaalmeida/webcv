@@ -1,0 +1,61 @@
+$bodyColor: #42228F;
+$oceanGreen: #3EC1C9;
+$yellow: #F0D68A;
+$darkblue: #3B2081;
+$pink: #F64EA3;
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$dan-app-primary: mat-palette($mat-indigo);
+$dan-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$dan-app-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$dan-app-theme: mat-light-theme($dan-app-primary, $dan-app-accent, $dan-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($dan-app-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  line-height: normal;
+  height: 100%;
+  background-color: $bodyColor;
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@mixin for-small-phone {
+  @media (max-width: 320px) { @content; }
+}
+@mixin for-phone-only {
+  @media (max-width: 576px) { @content; }
+}
+@mixin for-tablet {
+  @media (max-width: 768px) { @content; }
+}
+@mixin for-tablet-pro {
+  @media (max-width: 992px) { @content; }
+}
+@mixin for-desktop {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop {
+  @media (min-width: 1800px) { @content; }
+}
+
