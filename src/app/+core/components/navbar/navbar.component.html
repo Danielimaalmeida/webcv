@@ -1,0 +1,20 @@
+<!-- Other Devices -->
+<div *ngIf="!smartphone" class="navbar-container">
+  <div class="route" *ngFor="let route of routes">
+    <span class="route-text">{{route.label}}</span>
+  </div>
+</div>
+
+<!-- Smartphone -->
+<div *ngIf="smartphone" class="navbar-container" [@openClose]="opened ? 'open' : 'closed'">
+  <div *ngIf="smartphone" class="burger-wrapper">
+    <app-hamburguer-button style="margin:auto" (hamburgerIsOpen)="toggleNavbar($event)"></app-hamburguer-button>
+  </div>
+  <div [className]="opened ? 'route with-border' : 'route'" *ngFor="let route of routes">
+    <span [className]="opened ? 'route-text' : 'route-text-hidden'">{{route.label}}</span>
+  </div>
+</div>
+
+<div class="github-flag">
+  <img class="github-icon" src="./../../../../assets/icons/github.svg" alt="GitHub Icon">
+</div>

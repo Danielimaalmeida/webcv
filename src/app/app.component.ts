@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dan-app';
+
+  routes = [
+    {label: 'About', route: 'about'},
+    {label: 'Quiz', route: 'quiz'},
+    {label: 'Contact', route: 'contact'}
+  ]
 }
