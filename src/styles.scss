@@ -167,6 +167,36 @@ body {
   }
 }
 
+.vertical-bar {
+  height: 180px;
+  width: 28px;
+  background-color: $pink;
+  transition: width, height 500ms linear;
+
+  @include for-tablet-pro {
+    height: 150px;
+    width: 24px;
+  }
+
+  @include for-tablet {
+    height: 100%;
+    width: 20%;
+  }
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 30px solid $yellow;
+
+  &:hover {
+    border-top: 30px solid $oceanGreen;
+    cursor: pointer;
+  }
+}
+
 /*** Animation ***/
 @keyframes ColorChange {
   0% {color: $yellow;}
@@ -183,5 +213,11 @@ body {
 @keyframes Pan {
   0% {transform: translate(0,0)}
   50% {transform: translate(-200px,0)}
+  100% {transform: translate(0,0)}
+}
+
+@keyframes Panextended{
+  0% {transform: translate(0,0)}
+  50% {transform: translate(150px,0)}
   100% {transform: translate(0,0)}
 }
