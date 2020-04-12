@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  paddingTop: string;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  setPaddingTop(paddingTop: string) {
+    this.paddingTop = paddingTop;
   }
 
 }

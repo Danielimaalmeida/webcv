@@ -7,8 +7,7 @@
   justify-content: flex-end;
   position: fixed;
   top: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.144);
-  background-color: $bodyColor;
+  background-color: transparent;
   transition: height 400ms linear;
 
   @include for-tablet {
@@ -92,7 +91,7 @@
   height: 0;
   border-right: 100px solid white;
   border-bottom: 100px solid transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   transition: border-right 300ms linear;

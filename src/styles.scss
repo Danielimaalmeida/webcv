@@ -1,12 +1,12 @@
-$bodyColor: #42228F;
-$oceanGreen: #3EC1C9;
-$yellow: #F0D68A;
-$darkblue: #3B2081;
-$pink: #F64EA3;
+$bodyColor: #42228f;
+$oceanGreen: #3ec1c9;
+$yellow: #f0d68a;
+$darkblue: #3b2081;
+$pink: #f64ea3;
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -24,7 +24,11 @@ $dan-app-accent: mat-palette($mat-pink, A200, A100, A400);
 $dan-app-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$dan-app-theme: mat-light-theme($dan-app-primary, $dan-app-accent, $dan-app-warn);
+$dan-app-theme: mat-light-theme(
+  $dan-app-primary,
+  $dan-app-accent,
+  $dan-app-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -33,29 +37,151 @@ $dan-app-theme: mat-light-theme($dan-app-primary, $dan-app-accent, $dan-app-warn
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body {
+html,
+body {
   line-height: normal;
   height: 100%;
   background-color: $bodyColor;
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Barlow, "Helvetica Neue", sans-serif;
+}
 
 @mixin for-small-phone {
-  @media (max-width: 320px) { @content; }
+  @media (max-width: 320px) {
+    @content;
+  }
 }
 @mixin for-phone-only {
-  @media (max-width: 576px) { @content; }
+  @media (max-width: 576px) {
+    @content;
+  }
 }
 @mixin for-tablet {
-  @media (max-width: 768px) { @content; }
+  @media (max-width: 768px) {
+    @content;
+  }
 }
 @mixin for-tablet-pro {
-  @media (max-width: 992px) { @content; }
+  @media (max-width: 992px) {
+    @content;
+  }
 }
 @mixin for-desktop {
-  @media (min-width: 1200px) { @content; }
+  @media (min-width: 1200px) {
+    @content;
+  }
 }
 @mixin for-big-desktop {
-  @media (min-width: 1800px) { @content; }
+  @media (min-width: 1800px) {
+    @content;
+  }
 }
 
+/******** Text styles **********/
+
+.headline {
+  font-family: "Barlow", sans-serif;
+  display: block;
+  font-size: 120px;
+  line-height: normal;
+  font-weight: 900;
+
+  @include for-tablet {
+    font-size: 90px;
+  }
+
+  @include for-phone-only {
+    font-size: 70px;
+  }
+}
+
+.headline-sub {
+  font-family: "Barlow", sans-serif;
+  display: block;
+  font-size: 30px;
+  line-height: normal;
+  font-weight: 500;
+
+  @include for-tablet {
+    font-size: 22px;
+  }
+}
+
+/*** Geometric Objects ***/
+
+.circle {
+  width: 180px;
+  height: 180px;
+  border: 8px solid transparent;
+  border-radius: 50%;
+  border-bottom-color: inherit;
+  border-right-color: inherit;
+  margin: 0 0 0 auto;
+  transform: rotate(-45deg);
+
+  @include for-tablet-pro {
+    width: 150px;
+    height: 150px;
+    border: 6px solid transparent;
+    border-bottom-color: inherit;
+    border-right-color: inherit;
+  }
+
+  @include for-tablet {
+    width: 100px;
+    height: 100px;
+    border: 6px solid transparent;
+    border-bottom-color: inherit;
+    border-right-color: inherit;
+  }
+}
+
+.circle-sm {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: $oceanGreen;
+
+  @include for-tablet {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.horizontal-bar {
+  height: 28px;
+  width: 180px;
+  background-color: $yellow;
+  transition: width, height 500ms linear;
+
+  @include for-tablet-pro {
+    height: 24px;
+    width: 150px;
+  }
+
+  @include for-tablet {
+    height: 20px;
+    width: 100%;
+  }
+}
+
+/*** Animation ***/
+@keyframes ColorChange {
+  0% {color: $yellow;}
+  50% {color: $oceanGreen;}
+  100% {color: $pink;}
+}
+
+@keyframes BackgroundColorChange {
+  0% {background-color: $yellow; color: $yellow;}
+  50% {background-color: $oceanGreen; color: $oceanGreen;}
+  100% {background-color: $pink; color: $pink;}
+}
+
+@keyframes Pan {
+  0% {transform: translate(0,0)}
+  50% {transform: translate(-200px,0)}
+  100% {transform: translate(0,0)}
+}
