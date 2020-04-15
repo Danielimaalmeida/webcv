@@ -1,0 +1,25 @@
+@import './../../../../styles.scss';
+
+.card-container {
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.card-container>div:first-child {
+  display: flex;
+  margin: 25% 20px 20px 20px;
+}
+
+.card-container>div:last-child {
+  margin: 20px 20px 40px 20px;
+}
+
+.sm-bullet {
+  height: 8px;
+  width: 8px;
+  margin: 17px auto auto 10px;
+}

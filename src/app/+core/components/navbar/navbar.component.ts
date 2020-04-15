@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angular/core';
 import { trigger, state, style } from '@angular/animations';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
@@ -25,16 +25,23 @@ const closePhoneHeight = '60px';
     ])
   ]
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent implements OnInit, OnChanges {
   @Output() navbarSize: EventEmitter<string> = new EventEmitter();
   @Input() routes: NavbarRoute[];
+  @Input() scrolledDown: boolean;
   opened: boolean;
   smartphone = false;
+  backgroundColor = 'none';
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
     this.observeScreenSize();
+  }
+
+  ngOnChanges(): void {
+    console.log(this.scrolledDown)
+    this.backgroundColor = this.scrolledDown ? '#42228f' : 'transparent';
   }
 
   toggleNavbar(isOpen: boolean): void {

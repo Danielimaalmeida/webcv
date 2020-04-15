@@ -5,19 +5,15 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CoreModule } from './+core/+core.module';
-import { MainModule } from './main/main.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    MainModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CoreModule,
     LayoutModule
   ],
   providers: [],

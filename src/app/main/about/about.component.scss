@@ -1,0 +1,32 @@
+.about-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: auto;
+  width: 85%;
+  height: 500px;
+}
+
+.about-child {
+  height: 300px;
+  flex-basis: 33.3%;
+  flex: auto;
+  margin: 20px;
+  width: 259px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.title-container {
+  display: flex;
+  color: white;
+  width: 85%;
+  margin: 50px auto auto auto;
+  .title {
+    margin: 0 0 20px 20px;
+  }
+
+  .bullet {
+    margin: auto auto auto 20px;
+  }
+}

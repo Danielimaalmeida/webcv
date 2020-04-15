@@ -1,12 +1,12 @@
 <!-- Other Devices -->
-<div *ngIf="!smartphone" class="navbar-container">
+<div *ngIf="!smartphone" class="navbar-container" [ngStyle]="{'background-color': backgroundColor }">
   <div class="route" *ngFor="let route of routes">
     <span class="route-text">{{route.label}}</span>
   </div>
 </div>
 
 <!-- Smartphone -->
-<div *ngIf="smartphone" class="navbar-container" [@openClose]="opened ? 'open' : 'closed'">
+<div *ngIf="smartphone" class="navbar-container" [@openClose]="opened ? 'open' : 'closed'" [ngStyle]="{'background-color': backgroundColor }">
   <div *ngIf="smartphone" class="burger-wrapper">
     <app-hamburguer-button style="margin:auto" (hamburgerIsOpen)="toggleNavbar($event)"></app-hamburguer-button>
   </div>

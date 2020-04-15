@@ -109,7 +109,62 @@ body {
   }
 }
 
+.title {
+  font-family: "Barlow", sans-serif;
+  display: block;
+  font-size: 60px;
+  line-height: normal;
+  font-weight: bold;
+
+  @include for-tablet {
+    font-size: 46px;
+  }
+}
+
+.title {
+  font-family: "Barlow", sans-serif;
+  display: block;
+  font-size: 60px;
+  line-height: normal;
+  font-weight: bold;
+
+  @include for-tablet {
+    font-size: 46px;
+  }
+}
+
+.content-title {
+    font-family: "Barlow", sans-serif;
+    display: block;
+    font-size: 26px;
+    line-height: normal;
+    font-weight: bold;
+
+    @include for-tablet {
+      font-size: 23px;
+    }
+}
+
+.content {
+  font-family: "Barlow", sans-serif;
+  display: block;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 200;
+}
+
 /*** Geometric Objects ***/
+
+.bullet {
+  height: 15px;
+  width: 15px;
+  background-color: $yellow;
+
+  @include for-tablet {
+    height: 10px;
+    width: 10px;
+  }
+}
 
 .circle {
   width: 180px;
@@ -222,4 +277,9 @@ body {
   50% {transform: translate(0,-50px)}
   75% {transform: translate(0, 50px)}
   100% {transform: translate(150px,0)}
+}
+
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
 }
