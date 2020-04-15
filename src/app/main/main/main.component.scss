@@ -127,7 +127,7 @@
   @extend .main-container;
 
   > div {
-    width: 25%;
+    width: 33%;
     display: flex;
     @include for-phone-only {
       width: 50%;
@@ -135,7 +135,7 @@
   }
 }
 
-.bottom-container>div:nth-child(2){
+.bottom-container>div:nth-child(1){
   .vertical-bar {
     margin: 0 0 auto auto;
     @include for-phone-only {
@@ -153,13 +153,16 @@
   }
 }
 
-.bottom-container>div:nth-child(3){
+.bottom-container>div:nth-child(2){
+  img {
+    margin: 30px auto auto auto;
+  }
   @include for-phone-only {
     display: none;
   }
 }
 
-.bottom-container>div:nth-child(5){
+.bottom-container>div:nth-child(4){
   @include for-phone-only {
     display: none;
   }
@@ -168,6 +171,8 @@
 .scroll {
   position: absolute;
   margin-left: 48%;
+  margin-bottom: 20px;
+  bottom: 0;
   @include for-phone-only {
     margin-left: 45%;
   }
@@ -175,7 +180,7 @@
 
 .circle-container-bottom {
   width: fit-content;
-  margin: 0 0 auto auto;
+  margin: 20px auto auto 0;
   color: $oceanGreen;
 
   @include for-phone-only {

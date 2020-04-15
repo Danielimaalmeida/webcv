@@ -178,9 +178,9 @@ body {
     width: 24px;
   }
 
-  @include for-tablet {
+  @include for-phone-only() {
     height: 100%;
-    width: 20%;
+    width: 24px;
   }
 }
 
@@ -218,6 +218,8 @@ body {
 
 @keyframes Panextended{
   0% {transform: translate(0,0)}
-  50% {transform: translate(150px,0)}
-  100% {transform: translate(0,0)}
+  25% {transform: translate(150px,0)}
+  50% {transform: translate(0,-50px)}
+  75% {transform: translate(0, 50px)}
+  100% {transform: translate(150px,0)}
 }

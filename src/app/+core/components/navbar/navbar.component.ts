@@ -22,7 +22,7 @@ const closePhoneHeight = '60px';
       state('closed', style({
         height: closeHeight,
       }))
-    ]),
+    ])
   ]
 })
 export class NavbarComponent implements OnInit {
