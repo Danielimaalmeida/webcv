@@ -1,0 +1,277 @@
+@import './../../../../styles.scss';
+
+.timeline-card {
+  height: 320px;
+  max-width: 1080px;
+  margin: auto;
+  display: flex;
+  color: white;
+  position: relative;
+}
+
+.timeline-card-left {
+  @extend .timeline-card;
+
+  .circle-container {
+    width: 50%;
+    display: flex;
+    border-right: 1px solid #8D8D8D;
+  }
+  .text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    .position {
+      margin: 100px auto 0 50px;
+    }
+
+    .description {
+      margin: 15px 150px 0 50px;
+    }
+
+    .tags {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      margin: 15px 150px 0 50px;
+    }
+  }
+
+  @include for-tablet {
+    .text-container {
+      .description {
+        margin: 15px 50px 0 50px;
+      }
+
+      .tags {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin: 15px 80px 0 50px;
+      }
+    }
+  }
+
+  @include for-phone-only {
+    flex-direction: column;
+    .circle-container {
+      display: none;
+    }
+    .text-container {
+      width: 100%;
+
+      .position {
+        margin: auto 50px;
+      }
+
+      .description {
+        margin: auto 50px;
+      }
+
+      .tags {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin: auto 50px;
+      }
+    }
+  }
+}
+
+.timeline-card-right {
+  @extend .timeline-card;
+
+  .text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #8D8D8D;
+  }
+
+  .circle-container {
+    width: 50%;
+    display: flex;
+    position: relative;
+  }
+
+  .position {
+    margin: 100px 50px 0 auto;
+  }
+
+  .description {
+    margin: 15px 50px 0 150px;
+    text-align: right;
+  }
+
+  .tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: 15px 50px 0 150px;
+  }
+
+  @include for-tablet {
+    .text-container {
+      .description {
+        margin: 15px 50px 0 50px;
+      }
+
+      .tags {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin: 15px 50px 0 80px;
+      }
+    }
+  }
+
+  @include for-phone-only {
+    flex-direction: column;
+    .circle-container {
+      display: none;
+    }
+    .text-container {
+      width: 100%;
+
+      .position {
+        margin: auto 50px;
+      }
+
+      .description {
+        margin: auto 50px;
+      }
+
+      .tags {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin: auto 50px;
+      }
+    }
+  }
+}
+
+
+.circle-tm {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  line-height: 1.2;
+
+  @include for-phone-only {
+    width: 140px;
+    height: 140px;
+    font-size: 18px;
+    border-width: 4px;
+  }
+}
+
+.c-left {
+  margin: auto 40px auto auto;
+
+  @include for-phone-only {
+    margin: auto;
+  }
+}
+
+.c-right {
+  margin: auto auto auto 40px;
+  @include for-phone-only {
+    margin: auto;
+  }
+}
+
+.primary {
+  border: 7px solid $yellow;
+  @include for-tablet {
+    border: 5px solid $yellow;
+  }
+}
+
+.secondary {
+  border: 7px solid $oceanGreen;
+  @include for-tablet {
+    border: 5px solid $oceanGreen;
+  }
+}
+
+.third {
+  border: 7px solid $pink;
+  @include for-tablet {
+    border: 5px solid $pink;
+  }
+}
+
+.a-left-primary {
+  @extend .a-left;
+  border-right: 20px solid $yellow;
+}
+
+.a-left-secondary {
+  @extend .a-left;
+  border-right: 20px solid $oceanGreen;
+}
+
+.a-left-third {
+  @extend .a-left;
+  border-right: 20px solid $pink;
+}
+
+.a-right-primary {
+  @extend .a-right;
+  border-left: 20px solid $yellow;
+}
+
+.a-right-secondary {
+  @extend .a-right;
+  border-left: 20px solid $oceanGreen;
+}
+
+.a-right-third {
+  @extend .a-right;
+  border-left: 20px solid $pink;
+}
+
+.a-left {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin: auto 0;
+    @include for-phone-only {
+      display: none;
+    }
+}
+
+.a-right {
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  margin: auto 0;
+  @include for-phone-only {
+    display: none;
+  }
+}
+
+.filler {
+  position: absolute;
+  width: 30px;
+  height: 45%;
+  background-color: $bodyColor;
+  left: 49%;
+
+  @include for-phone-only {
+    display: none;
+  }
+
+}
