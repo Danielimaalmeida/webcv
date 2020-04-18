@@ -1,3 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
+import { LanguageService } from './languages/language.service';
+import { LanguageFacade } from './languages/language.facade';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -10,12 +13,17 @@ import { TimelineCardComponent } from './components/timeline-card/timeline-card.
 @NgModule({
   declarations: [NavbarComponent, HamburguerButtonComponent, AboutCardComponent, TimelineCardComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [
     NavbarComponent,
     AboutCardComponent,
     TimelineCardComponent
+  ],
+  providers: [
+    LanguageFacade,
+    LanguageService
   ]
 })
 export class CoreModule { }

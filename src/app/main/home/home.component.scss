@@ -78,6 +78,10 @@
   text-align: center;
   color: white;
   @extend .main-container;
+
+  @include for-phone-only {
+    height: 35%;
+  }
 }
 
 .title-box {

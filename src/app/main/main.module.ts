@@ -6,12 +6,13 @@ import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
 import { CoreModule } from '../+core/+core.module';
 import { MainRoutingModule } from './main-routing.module';
+import { TimelineComponent } from './timeline/timeline.component';
 
 
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, MainComponent],
+  declarations: [HomeComponent, AboutComponent, MainComponent, TimelineComponent],
   imports: [
     CommonModule,
     CoreModule,

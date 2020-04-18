@@ -1,0 +1,61 @@
+{
+  "greetings": "Hi!",
+  "title": "My name is Daniel Almeida and I'm a Frontend Developer",
+  "about": {
+    "title": "About",
+    "cards": [
+      {
+        "title": "technology",
+        "text": "Technology guided my educational path. The possibilities of the emerging digital processes motivated my research as an Architect and made me persuit an education and career in Software Engeneering."
+      },
+      {
+        "title": "design",
+        "text": "As a former Architect I love to build beautiful things. Frontend Development gives me the opportunity to gather two of my favourite things: technology and design."
+      },
+      {
+        "title": "animals",
+        "text": "Technology guided my educational path. The possibilities of the emerging digital processes motivated my research as an Architect and made me persuit an education and career in Software Engeneering."
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Title",
+    "cards": [
+      {
+        "company": "Cocus Portugal",
+        "role": "Frontend Developer",
+        "description": "Frontend development in an Agile international team, using the power of RxJS and Angular to deliver a great product.",
+        "tags": ["Angular", "RxJS", "NgRx", "Typescript", "Jasmine"],
+        "date": "2019 - Now"
+      },
+      {
+        "company": "Critical Software",
+        "role": "Software Developer",
+        "description": "Full-Stack Development for a foreign government institution software.",
+        "tags": ["Angular", "Typescript", "Java", "JavaEE", "WebSphere"],
+        "date": "2018 - 2019"
+      },
+      {
+        "company": "Switch - PTH",
+        "role": "Software Developer",
+        "description": "Post-Graduation in Software Engineering in a full Agile environment.",
+        "tags": ["React", "Redux", "Javascript", "Java", "Spring", "Docker"],
+        "date": "2018 - 2019"
+      },
+      {
+        "company": "236 Arquitectos",
+        "role": "Architect",
+        "description": "Idealization and execution of Architecture projects during all its phases: licensing, development and detailing.",
+        "tags": [],
+        "date": "2016 - 2018"
+      },
+      {
+        "company": "Digital Fabrication Lab",
+        "role": "Assistent",
+        "description": "The Digital Fabrication Laboratory (DFL) is the research group of the CEAU/FAUP committed with developing advanced research work in the fields of Design,",
+        "tags": [],
+        "date": "2013 - 2015"
+      }
+    ]
+  }
+}

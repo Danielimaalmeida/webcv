@@ -16,7 +16,6 @@ export class AboutCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.bulletColor)
   }
 
 }

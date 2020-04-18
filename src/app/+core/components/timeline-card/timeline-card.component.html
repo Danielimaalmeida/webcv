@@ -1,24 +1,26 @@
-<div *ngIf="!right" class="timeline-card-left">
-  <div  *ngIf="isFirst" class="filler"></div>
-  <div class="circle-container">
-    <div [className]="'circle-tm c-left ' + color">Cocus Portugal</div>
-    <div [className]="'a-left-' + color"></div>
-  </div>
-  <div class="text-container">
-    <div class="position content-strong">Frontend Developer</div>
-    <div class="description content">Frontend development in an international team, using the power of RxJS and Angular to deliver a great product.</div>
-    <div class="tags"><div class="tag" *ngFor="let tag of tags">{{tag}}</div></div>
-  </div>
+<div #card *ngIf="!right" class="timeline-card-left">
+    <div *ngIf="isFirst" class="filler"></div>
+    <div *ngIf="isVisible" [@enterAnimation] class="circle-container">
+      <div [className]="'circle-tm c-left ' + color">{{content?.company}}</div>
+      <div [className]="'a-left-' + color"></div>
+    </div>
+    <div *ngIf="isVisible" [@enterAnimation] class="text-container">
+      <div class="position content-strong">{{content?.role}}</div>
+      <div class="date content">{{content?.date}}</div>
+      <div class="description content">{{content?.description}}</div>
+      <div class="tags"><div class="tag" *ngFor="let tag of content?.tags">{{tag}}</div></div>
+    </div>
 </div>
 
-<div *ngIf="right" class="timeline-card-right">
-  <div class="text-container">
-    <div class="position content-strong">Frontend Developer</div>
-    <div class="description content">Frontend development in an international team, using the power of RxJS and Angular to deliver a great product.</div>
-    <div class="tags"><div class="tag" *ngFor="let tag of tags">{{tag}}</div></div>
+<div #card *ngIf="right" class="timeline-card-right">
+  <div *ngIf="isVisible" [@enterAnimation] class="text-container">
+    <div class="position content-strong">{{content?.role}}</div>
+    <div class="date content">{{content?.date}}</div>
+    <div class="description content">{{content?.description}}</div>
+    <div class="tags"><div class="tag" *ngFor="let tag of content?.tags">{{tag}}</div></div>
   </div>
-  <div class="circle-container">
+  <div *ngIf="isVisible" [@enterAnimation] class="circle-container">
     <div [className]="'a-right-' + color"></div>
-    <div [className]="'circle-tm c-right ' + color">Cocus Portugal</div>
+    <div [className]="'circle-tm c-right ' + color">{{content?.company}}</div>
   </div>
 </div>

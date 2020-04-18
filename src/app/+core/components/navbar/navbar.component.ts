@@ -27,11 +27,15 @@ const closePhoneHeight = '60px';
 })
 export class NavbarComponent implements OnInit, OnChanges {
   @Output() navbarSize: EventEmitter<string> = new EventEmitter();
-  @Input() routes: NavbarRoute[];
   @Input() scrolledDown: boolean;
   opened: boolean;
   smartphone = false;
   backgroundColor = 'none';
+  routes: NavbarRoute[] = [
+    {label: 'About', route: 'about'},
+    {label: 'Quiz', route: 'quiz'},
+    {label: 'Contact', route: 'contact'}
+  ];
 
   constructor(private breakpointObserver: BreakpointObserver) { }
 
@@ -40,7 +44,6 @@ export class NavbarComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(): void {
-    console.log(this.scrolledDown)
     this.backgroundColor = this.scrolledDown ? '#42228f' : 'transparent';
   }
 

@@ -1,4 +1,6 @@
+import { LanguageFacade } from './../../+core/languages/language.facade';
 import { Component, OnInit, HostListener } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -7,20 +9,18 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  languageFile$: Observable<any>;
   scrolleDown = false;
 
-  routes = [
-    {label: 'About', route: 'about'},
-    {label: 'Quiz', route: 'quiz'},
-    {label: 'Contact', route: 'contact'}
-  ]
-
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private languageFacade: LanguageFacade) {
+    this.languageFile$ = languageFacade.language$;
   }
 
-  @HostListener('window:scroll', ['$event']) // for window scroll events
+  ngOnInit(): void {
+    this.languageFacade.get();
+  }
+
+  @HostListener('window:scroll', ['$event'])
   onScroll(event) {
     const verticalOffset = window.pageYOffset || 0;
     this.scrolleDown = !!verticalOffset;

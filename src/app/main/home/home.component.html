@@ -1,11 +1,14 @@
 <!-- Top Container -->
-
 <div class="top-container" [ngStyle]="{'padding-top': paddingTop}">
   <div><img class="dots" src="./../../../assets/icons/dots.svg" alt="main dots">
   </div>
   <div><img class="dotted-line" src="./../../../assets/icons/dotted-line.svg" alt="dotted line"></div>
-  <div><div class="circle-container-top"><div class="circle"></div>
-  </div><div class="circle-sm"></div></div>
+  <div>
+    <div class="circle-container-top">
+      <div class="circle"></div>
+    </div>
+    <div class="circle-sm"></div>
+  </div>
   <div><img class="pattern" src="./../../../assets/icons/pattern.svg" alt="pattern dots"></div>
 </div>
 
@@ -13,11 +16,13 @@
 
 <div class="middle-container">
   <div>
-    <div class="circle-container-middle"><div class="circle"></div></div>
+    <div class="circle-container-middle">
+      <div class="circle"></div>
+    </div>
   </div>
   <div class="title-box">
-    <div class="headline">Hi!</div>
-    <div class="headline-sub">My name is Daniel Almeida and I'm a Frontend Developer</div>
+    <div class="headline">{{language?.greetings}}</div>
+    <div class="headline-sub">{{language?.title}}</div>
   </div>
   <div>
     <div class="horizontal-bar"></div>
@@ -31,8 +36,13 @@
     <div class="circle-sm"></div>
   </div>
   <div><img class="pattern" src="./../../../assets/icons/pattern.svg" alt="pattern dots"></div>
-  <div><div class="circle-container-bottom"><div class="circle"></div></div>
-</div>
+  <div>
+    <div class="circle-container-bottom">
+      <div class="circle"></div>
+    </div>
+  </div>
 
 
-<div *ngIf="arrowDisplay" [@enterAnimation] class="scroll"><div class="arrow-down"></div></div>
+  <div *ngIf="arrowDisplay" [@enterAnimation] class="scroll">
+    <div class="arrow-down"></div>
+  </div>

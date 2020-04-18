@@ -1,5 +1,5 @@
-import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit, Input } from '@angular/core';
+import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -22,10 +22,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  paddingTop: string;
-
+  @Input() language: any;
   @Input() arrowDisplay = true;
 
+  paddingTop: string;
   index = 0;
 
   constructor() { }

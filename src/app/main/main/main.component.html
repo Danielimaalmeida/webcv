@@ -1,4 +1,5 @@
-<app-navbar [routes]="routes" [scrolledDown]="scrolleDown" (navbarSize)="home.setPaddingTop($event)"></app-navbar>
-<app-home #home [arrowDisplay]="!scrolleDown"></app-home>
-<app-about></app-about>
+<app-navbar [scrolledDown]="scrolleDown" (navbarSize)="home.setPaddingTop($event)"></app-navbar>
+<app-home #home [language]="languageFile$ | async" [arrowDisplay]="!scrolleDown"></app-home>
+<app-about  [language]="languageFile$ | async"></app-about>
+<app-timeline [language]="languageFile$ | async"></app-timeline>
 <router-outlet></router-outlet>
