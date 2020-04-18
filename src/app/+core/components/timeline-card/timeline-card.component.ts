@@ -11,15 +11,9 @@ import { TimelineCard } from './../../model/timeline.model';
       'enterAnimation', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('1100ms', keyframes([
-          style({ transform: 'translateY(-200px)', animationTimingFunction: 'ease-in', opacity: 0, offset: 0 }),
-          style({ transform: 'translateY(0)', animationTimingFunction: 'ease-out', opacity: 1, offset: 0.38 }),
-          style({ transform: 'translateY(-65px)', animationTimingFunction: 'ease-in', opacity: 1, offset: 0.55 }),
-          style({ transform: 'translateY(0)', animationTimingFunction: 'ease-out', opacity: 1, offset: 0.72 }),
-          style({ transform: 'translateY(-28px)', animationTimingFunction: 'ease-in', opacity: 1, offset: 0.81 }),
-          style({ transform: 'translateY(0)', animationTimingFunction: 'ease-out', opacity: 1, offset: 0.9 }),
-          style({ transform: 'translateY(-8px)', animationTimingFunction: 'ease-in', opacity: 1, offset: 0.95 }),
-          style({ transform: 'translateY(0)', animationTimingFunction: 'ease-out', opacity: 1, offset: 1 }),
+        animate('700ms', keyframes([
+          style({ transform: 'translateY(200px)', animationTimingFunction: 'ease-in', opacity: 0}),
+          style({ transform: 'translateY(0)', animationTimingFunction: 'ease-out', opacity: 1 }),
         ]))
       ]),
       transition(':leave', [
