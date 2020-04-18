@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const mainRoutes: Routes = [
+  { path: '', redirectTo: 'main' },
   { path: 'main', component: MainComponent }
 ];
 
