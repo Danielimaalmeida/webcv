@@ -139,6 +139,10 @@ body {
   font-size: 18px;
   line-height: normal;
   font-weight: bold;
+
+  @include for-phone-only {
+    font-size: 14px;
+  }
 }
 
 .content {

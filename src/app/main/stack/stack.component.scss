@@ -3,6 +3,11 @@
 .stack {
   display: flex;
   width: 100%;
+  margin: 100px 0;
+
+  @include for-phone-only {
+    margin-top: 50px;
+  }
 }
 
 .left-container {
@@ -47,7 +52,7 @@
   }
 
   @include for-phone-only {
-    height: 500px;
+    height: 400px;
   }
 }
 
@@ -138,7 +143,19 @@
   .tech-icon {
     fill: white;
     width: 50px;
+    min-height: 70px;
     margin: auto;
+  }
+
+  .content-strong {
+    margin: auto;
+  }
+
+  @include for-phone-only {
+    .tech-icon {
+      width: 30px;
+      margin: auto;
+    }
   }
 }
 
