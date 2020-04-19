@@ -3,13 +3,13 @@
 .card-container {
   height: 100%;
   width: 100%;
-  border: 1px solid white;
+  border: 1px solid #949494;
   display: flex;
   flex-direction: column;
   color: white;
 }
 
-.card-container>div:first-child {
+.card-container>div:nth-child(2) {
   display: flex;
   margin: 90px 20px 20px 20px;
 }
@@ -22,4 +22,11 @@
   height: 8px;
   width: 8px;
   margin: 17px auto auto 10px;
+}
+
+.change-flag {
+  width: 0;
+  height: 0;
+  border-bottom: 30px solid transparent;
+  margin: 0 0 auto auto;
 }

@@ -233,6 +233,13 @@
   }
 }
 
+.grey {
+  border: 7px solid #BCBCBC;
+  @include for-tablet {
+    border: 5px solid #BCBCBC;
+  }
+}
+
 .a-left-primary {
   @extend .a-left;
   border-right: 20px solid $yellow;
@@ -257,6 +264,14 @@
   }
 }
 
+.a-left-grey {
+  @extend .a-left;
+  border-right: 20px solid #BCBCBC;
+  @include for-phone-only {
+    border-right: 12px solid #BCBCBC;
+  }
+}
+
 .a-right-primary {
   @extend .a-right;
   border-left: 20px solid $yellow;
@@ -278,6 +293,14 @@
   border-left: 20px solid $pink;
   @include for-phone-only {
     border-left: 12px solid $pink;
+  }
+}
+
+.a-right-grey {
+  @extend .a-right;
+  border-left: 20px solid #BCBCBC;
+  @include for-phone-only {
+    border-left: 12px solid #BCBCBC;
   }
 }
 
@@ -313,8 +336,20 @@
   left: 49%;
 
   @include for-phone-only {
-    width: 20px;
-    left: 37%;
+    display: none;
+  }
+}
+
+.filler-bottom {
+  position: absolute;
+  width: 30px;
+  height: 45%;
+  background-color: $bodyColor;
+  left: 49%;
+  bottom: 0;
+
+  @include for-phone-only {
+    display: none;
   }
 }
 

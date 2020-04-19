@@ -1,0 +1,144 @@
+@import './../../../styles.scss';
+
+.stack {
+  display: flex;
+  width: 100%;
+}
+
+.left-container {
+  width: 8%;
+}
+
+.middle-container {
+  width: 84%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: $yellow;
+  display: flex;
+}
+
+.right-container {
+  width: 8%;
+}
+
+.title-container {
+  display: flex;
+  color: white;
+  width: 85%;
+  .title {
+    margin: 20px 0 20px 20px;
+  }
+
+  .bullet {
+    margin: auto auto auto 20px;
+    background-color: $pink;
+  }
+}
+
+.stack-container {
+  width: 100%;
+  height: 700px;
+  background-color: $yellow;
+  display: flex;
+  @include for-tablet {
+    height: 600px;
+  }
+
+  @include for-phone-only {
+    height: 500px;
+  }
+}
+
+.itablet {
+  width: 70%;
+  height: 80%;
+  background-color: white;
+  border-radius: 30px;
+  margin: auto;
+  display: flex;
+  transition: height, width 500ms linear;
+  @include for-tablet {
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 0 auto auto auto;
+  }
+
+  .cam {
+    width: 5%;
+    display: flex;
+
+    >div {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid $yellow;
+      margin: auto;
+    }
+
+    @include for-tablet {
+      width: 100%;
+      height: 5%;
+
+      >div {
+        width: 10px;
+        height: 10px;
+        margin: auto;
+      }
+    }
+  }
+
+  .button {
+    width: 5%;
+    display: flex;
+
+    >div {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      border: 2px solid $yellow;
+      margin: auto;
+    }
+
+    @include for-tablet {
+      width: 100%;
+      height: 5%;
+      >div {
+        width: 15px;
+        height: 15px;
+        margin: auto;
+      }
+    }
+  }
+
+  .interior {
+    margin: auto;
+    width: 90%;
+    height: 90%;
+    background-color: $pink;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.circle-container-left {
+  width: fit-content;
+  margin: 20px auto auto -120px;
+  color: $oceanGreen;
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  max-height: 80px;
+  margin: auto;
+
+  .tech-icon {
+    fill: white;
+    width: 50px;
+    margin: auto;
+  }
+}
+

@@ -7,12 +7,13 @@ import { MainComponent } from './main/main.component';
 import { CoreModule } from '../+core/+core.module';
 import { MainRoutingModule } from './main-routing.module';
 import { TimelineComponent } from './timeline/timeline.component';
+import { StackComponent } from './stack/stack.component';
 
 
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, MainComponent, TimelineComponent],
+  declarations: [HomeComponent, AboutComponent, MainComponent, TimelineComponent, StackComponent],
   imports: [
     CommonModule,
     CoreModule,

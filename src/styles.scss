@@ -121,18 +121,6 @@ body {
   }
 }
 
-.title {
-  font-family: "Barlow", sans-serif;
-  display: block;
-  font-size: 60px;
-  line-height: normal;
-  font-weight: bold;
-
-  @include for-tablet {
-    font-size: 46px;
-  }
-}
-
 .content-title {
     font-family: "Barlow", sans-serif;
     display: block;

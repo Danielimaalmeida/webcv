@@ -11,7 +11,7 @@ import { TimelineCard } from './../../model/timeline.model';
       'enterAnimation', [
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('700ms', keyframes([
+        animate('900ms', keyframes([
           style({ transform: 'translateY(200px)', animationTimingFunction: 'ease-in', opacity: 0}),
           style({ transform: 'translateY(0)', animationTimingFunction: 'ease-out', opacity: 1 }),
         ]))
@@ -30,7 +30,8 @@ export class TimelineCardComponent {
 
   @Input() right: boolean;
   @Input() isFirst: boolean;
-  @Input() color: 'primary' | 'secondary' | 'third' = 'primary';
+  @Input() isLast: boolean;
+  @Input() color: 'primary' | 'secondary' | 'third' | 'grey' = 'primary';
   @Input() tags: Array<string> = ['Angular', 'RxJS', 'NgRx', 'Typescript', 'Jasmine'];
   @Input() scrollingDown: boolean;
   @Input() isVisible: boolean;

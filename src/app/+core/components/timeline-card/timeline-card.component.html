@@ -23,4 +23,5 @@
     <div [className]="'a-right-' + color"></div>
     <div [className]="'circle-tm c-right ' + color">{{content?.company}}</div>
   </div>
+  <div *ngIf="isLast" class="filler-bottom"></div>
 </div>

@@ -10,12 +10,16 @@ export class AboutCardComponent implements OnInit {
 
   @Input() title: string;
   @Input() text: string;
-
   @Input() bulletColor: BulletColors;
+  flipped: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onFlipClick(): void {
+    this.flipped = !this.flipped;
   }
 
 }

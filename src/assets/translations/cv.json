@@ -14,7 +14,7 @@
       },
       {
         "title": "animals",
-        "text": "Technology guided my educational path. The possibilities of the emerging digital processes motivated my research as an Architect and made me persuit an education and career in Software Engeneering."
+        "text": "My pets are my family and help me handling with the natural stress that comes with role of a Software Developer."
       }
     ]
   },
@@ -36,7 +36,7 @@
         "date": "2018 - 2019"
       },
       {
-        "company": "Switch - PTH",
+        "company": "Switch",
         "role": "Software Developer",
         "description": "Post-Graduation in Software Engineering in a full Agile environment.",
         "tags": ["React", "Redux", "Javascript", "Java", "Spring", "Docker"],
@@ -48,6 +48,13 @@
         "description": "Idealization and execution of Architecture projects during all its phases: licensing, development and detailing.",
         "tags": [],
         "date": "2016 - 2018"
+      },
+      {
+        "company": "Sonae",
+        "role": "Architect Trainee",
+        "description": "Idealization and execution of temporary pavilions.",
+        "tags": [],
+        "date": "2015 - 2016"
       },
       {
         "company": "Digital Fabrication Lab",
