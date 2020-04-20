@@ -9,7 +9,7 @@
   top: 0;
   background-color: transparent;
   transition: height 400ms linear, background-color 400ms linear;
-  z-index: 2;
+  z-index: 10;
 
   @include for-tablet {
     justify-content: center;
@@ -96,7 +96,7 @@
   top: 0;
   right: 0;
   transition: border-right 300ms linear;
-  z-index: 3;
+  z-index: 11;
 
   &:hover {
     border-right: 100px solid $yellow;
