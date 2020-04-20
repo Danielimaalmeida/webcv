@@ -105,6 +105,14 @@
         margin: auto;
       }
     }
+
+    @include for-phone-only {
+      >div {
+        width: 5px;
+        height: 5px;
+        margin: auto;
+      }
+    }
   }
 
   .button {
@@ -125,6 +133,14 @@
       >div {
         width: 15px;
         height: 15px;
+        margin: auto;
+      }
+    }
+
+    @include for-phone-only {
+      >div {
+        width: 10px;
+        height: 10px;
         margin: auto;
       }
     }
