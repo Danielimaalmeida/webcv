@@ -1,17 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnChanges, Input } from '@angular/core';
+import { StackContent } from './../../+core/model/stack.model';
 
 @Component({
   selector: 'app-stack',
   templateUrl: './stack.component.html',
   styleUrls: ['./stack.component.scss']
 })
-export class StackComponent implements OnInit {
+export class StackComponent implements OnChanges {
 
   @Input() language: any;
+  stackContentList: StackContent[]
+  title: string;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
+    if (this.language) {
+      const { tech, title } = this.language?.stack;
+      this.stackContentList = tech;
+      this.title = title;
+    }
   }
 
 }

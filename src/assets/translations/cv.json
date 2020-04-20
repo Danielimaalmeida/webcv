@@ -25,21 +25,40 @@
         "company": "Cocus Portugal",
         "role": "Frontend Developer",
         "description": "Frontend development in an Agile international team, using the power of RxJS and Angular to deliver a great product.",
-        "tags": ["Angular", "RxJS", "NgRx", "Typescript", "Jasmine"],
+        "tags": [
+          "Angular",
+          "RxJS",
+          "NgRx",
+          "Typescript",
+          "Jasmine"
+        ],
         "date": "2019 - Now"
       },
       {
         "company": "Critical Software",
         "role": "Software Developer",
         "description": "Full-Stack Development for a foreign government institution software.",
-        "tags": ["Angular", "Typescript", "Java", "JavaEE", "WebSphere"],
+        "tags": [
+          "Angular",
+          "Typescript",
+          "Java",
+          "JavaEE",
+          "WebSphere"
+        ],
         "date": "2018 - 2019"
       },
       {
         "company": "Switch",
         "role": "Software Developer",
         "description": "Post-Graduation in Software Engineering in a full Agile environment.",
-        "tags": ["React", "Redux", "Javascript", "Java", "Spring", "Docker"],
+        "tags": [
+          "React",
+          "Redux",
+          "Javascript",
+          "Java",
+          "Spring",
+          "Docker"
+        ],
         "date": "2018 - 2019"
       },
       {
@@ -62,6 +81,41 @@
         "description": "The Digital Fabrication Laboratory (DFL) is the research group of the CEAU/FAUP committed with developing advanced research work in the fields of Design,",
         "tags": [],
         "date": "2013 - 2015"
+      }
+    ]
+  },
+  "stack": {
+    "title": "Stack",
+    "tech": [
+      {
+        "imageURL": "./../../../assets/icons/angular.svg",
+        "alt": "Angular icon",
+        "name": "Angular"
+      },
+      {
+        "imageURL": "./../../../assets/icons/typescript.svg",
+        "alt": "Typescript icon",
+        "name": "Typescript"
+      },
+      {
+        "imageURL": "./../../../assets/icons/rxjs.svg",
+        "alt": "RxJS icon",
+        "name": "RxJS"
+      },
+      {
+        "imageURL": "./../../../assets/icons/javascript.svg",
+        "alt": "Javascript icon",
+        "name": "Javascript"
+      },
+      {
+        "imageURL": "./../../../assets/icons/react.svg",
+        "alt": "React icon",
+        "name": "React"
+      },
+      {
+        "imageURL": "./../../../assets/icons/java.svg",
+        "alt": "Java icon",
+        "name": "Java"
       }
     ]
   }
