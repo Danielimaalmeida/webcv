@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { trigger, state, style } from '@angular/animations';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { NavbarRoute } from './../../model/navbar.model';
+import { scrollTo } from '../../utils';
 
 const openHeight = '228px';
 const closeHeight = '70px';
@@ -32,9 +33,9 @@ export class NavbarComponent implements OnInit, OnChanges {
   smartphone = false;
   backgroundColor = 'none';
   routes: NavbarRoute[] = [
-    {label: 'About', route: 'about'},
-    {label: 'Quiz', route: 'quiz'},
-    {label: 'Contact', route: 'contact'}
+    { label: 'About', route: 'about', scroll: true },
+    { label: 'Quiz', route: 'quiz', scroll: false },
+    { label: 'Contact', route: 'contact', scroll: true }
   ];
 
   constructor(private breakpointObserver: BreakpointObserver) { }
@@ -59,6 +60,14 @@ export class NavbarComponent implements OnInit, OnChanges {
       this.smartphone = result.matches ? true : false;
       this.emmitNavbarHeight();
     });
+  }
+
+
+  navigate(routItem: NavbarRoute): void {
+    const { scroll, route } = routItem;
+    if (scroll) {
+      scrollTo(route);
+    }
   }
 
   private emmitNavbarHeight(): void {

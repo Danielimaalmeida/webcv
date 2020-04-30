@@ -44,5 +44,5 @@
 
 
   <div *ngIf="arrowDisplay" [@enterAnimation] class="scroll">
-    <div class="arrow-down"></div>
+    <div (click)="scrollDown()" class="arrow-down"></div>
   </div>

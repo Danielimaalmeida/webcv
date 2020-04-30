@@ -1,4 +1,4 @@
-<div class="title-container">
+<div id="about" class="title-container">
   <div class="title">About</div>
   <div class="bullet"></div>
 </div>
@@ -13,8 +13,10 @@
     <app-about-card [title]="language?.about.cards[2].title" [text]="language?.about.cards[2].text" [bulletColor]="bulletColors.YELLOW"></app-about-card>
   </div>
 </div>
-<div class="title-container">
-  <div class="title">Timeline</div>
-  <div class="bullet"></div>
+<div class="logos-container">
+  <div class="channel" *ngFor="let channel of language?.about.channels">
+    <img class="icon" [src]="channel.imageURL">
+    <div class="content">{{channel.name}}</div>
+  </div>
 </div>
 

@@ -16,6 +16,23 @@
         "title": "animals",
         "text": "My pets are my family and help me handling with the natural stress that comes with role of a Software Developer."
       }
+    ],
+    "channels": [
+      {
+        "imageURL": "./../../../assets/icons/location.svg",
+        "alt": "Location icon",
+        "name": "Porto - Aveiro"
+      },
+      {
+        "imageURL": "./../../../assets/icons/linkdin.svg",
+        "alt": "Linkdin icon",
+        "name": "/in/danielimalmeida"
+      },
+      {
+        "imageURL": "./../../../assets/icons/email.svg",
+        "alt": "Email icon",
+        "name": "danielimalmeida@gmail.com"
+      }
     ]
   },
   "timeline": {

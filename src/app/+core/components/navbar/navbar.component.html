@@ -1,7 +1,7 @@
 <!-- Other Devices -->
 <div *ngIf="!smartphone" class="navbar-container" [ngStyle]="{'background-color': backgroundColor }">
   <div class="route" *ngFor="let route of routes">
-    <span class="route-text">{{route.label}}</span>
+    <span (click)="navigate(route)"class="route-text">{{route.label}}</span>
   </div>
 </div>
 
@@ -10,7 +10,7 @@
   <div *ngIf="smartphone" class="burger-wrapper">
     <app-hamburguer-button style="margin:auto" (hamburgerIsOpen)="toggleNavbar($event)"></app-hamburguer-button>
   </div>
-  <div [className]="opened ? 'route with-border' : 'route'" *ngFor="let route of routes">
+  <div [className]="opened ? 'route with-border' : 'route'" *ngFor="let route of routes" (click)="navigate(route)">
     <span [className]="opened ? 'route-text' : 'route-text-hidden'">{{route.label}}</span>
   </div>
 </div>

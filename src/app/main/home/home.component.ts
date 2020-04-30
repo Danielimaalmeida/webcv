@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { scrollTo } from 'src/app/+core/utils';
 
 @Component({
   selector: 'app-home',
@@ -34,6 +35,10 @@ export class HomeComponent implements OnInit {
 
   setPaddingTop(paddingTop: string) {
     this.paddingTop = paddingTop;
+  }
+
+  scrollDown(): void {
+    scrollTo('about');
   }
 
 }

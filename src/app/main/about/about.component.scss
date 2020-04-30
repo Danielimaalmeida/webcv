@@ -42,3 +42,26 @@
     }
   }
 }
+
+.logos-container {
+  margin: 150px 0;
+  display: flex;
+  justify-content: center;
+
+  .channel {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    text-align: center;
+    color: white;
+
+    .icon {
+      height: 80px;
+    }
+
+    >div {
+      margin-top: 1em;
+      font-weight: 500;
+    }
+  }
+}

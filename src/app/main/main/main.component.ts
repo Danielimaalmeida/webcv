@@ -1,5 +1,6 @@
+import { AboutComponent } from './../about/about.component';
 import { LanguageFacade } from './../../+core/languages/language.facade';
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,6 +9,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+
+  @ViewChild('about') about: ElementRef;
 
   languageFile$: Observable<any>;
   scrolleDown = false;
@@ -25,5 +28,4 @@ export class MainComponent implements OnInit {
     const verticalOffset = window.pageYOffset || 0;
     this.scrolleDown = !!verticalOffset;
   }
-
 }
