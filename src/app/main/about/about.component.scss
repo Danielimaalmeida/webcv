@@ -64,4 +64,13 @@
       font-weight: 500;
     }
   }
+
+  @include for-phone-only {
+    margin: 50px 0;
+    flex-direction: column;
+
+    .channel {
+      height: 180px;
+    }
+  }
 }
