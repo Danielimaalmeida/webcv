@@ -1,10 +1,13 @@
-<div class="title-container">
-  <div class="title">Timeline</div>
-  <div class="bullet"></div>
+<div id="timeline">
+  <div class="title-container">
+    <div class="title">Timeline</div>
+    <div class="bullet"></div>
+  </div>
+  <app-timeline-card [content]="language?.timeline.cards[0]" [color]="'primary'" [isFirst]="'true'"></app-timeline-card>
+  <app-timeline-card [content]="language?.timeline.cards[1]" [right]="true" [color]="'secondary'"></app-timeline-card>
+  <app-timeline-card [content]="language?.timeline.cards[2]" [color]="'third'"></app-timeline-card>
+  <app-timeline-card [content]="language?.timeline.cards[3]" [right]="true" [color]="'grey'"></app-timeline-card>
+  <app-timeline-card [content]="language?.timeline.cards[4]" [color]="'grey'"></app-timeline-card>
+  <app-timeline-card [content]="language?.timeline.cards[5]" [right]="true" [color]="'grey'" [isLast]="'true'"></app-timeline-card>
+
 </div>
-<app-timeline-card [content]="language?.timeline.cards[0]" [color]="'primary'" [isFirst]="'true'"></app-timeline-card>
-<app-timeline-card [content]="language?.timeline.cards[1]" [right]="true" [color]="'secondary'"></app-timeline-card>
-<app-timeline-card [content]="language?.timeline.cards[2]" [color]="'third'"></app-timeline-card>
-<app-timeline-card [content]="language?.timeline.cards[3]" [right]="true" [color]="'grey'"></app-timeline-card>
-<app-timeline-card [content]="language?.timeline.cards[4]" [color]="'grey'"></app-timeline-card>
-<app-timeline-card [content]="language?.timeline.cards[5]" [right]="true" [color]="'grey'" [isLast]="'true'"></app-timeline-card>

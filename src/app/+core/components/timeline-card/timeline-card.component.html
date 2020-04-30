@@ -1,6 +1,6 @@
 <div #card *ngIf="!right" class="timeline-card-left">
     <div *ngIf="isFirst" class="filler"></div>
-    <div *ngIf="isVisible" [@enterAnimation] class="circle-container">
+    <div *ngIf="isVisible" [@enterAnimation] class="circle-container" (click)="navigate()">
       <div [className]="'circle-tm c-left ' + color">{{content?.company}}</div>
       <div [className]="'a-left-' + color"></div>
     </div>
@@ -19,7 +19,7 @@
     <div class="description content">{{content?.description}}</div>
     <div class="tags"><div class="tag" *ngFor="let tag of content?.tags">{{tag}}</div></div>
   </div>
-  <div *ngIf="isVisible" [@enterAnimation] class="circle-container">
+  <div *ngIf="isVisible" [@enterAnimation] class="circle-container" (click)="navigate()">
     <div [className]="'a-right-' + color"></div>
     <div [className]="'circle-tm c-right ' + color">{{content?.company}}</div>
   </div>

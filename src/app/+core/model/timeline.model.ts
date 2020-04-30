@@ -9,4 +9,5 @@ export interface TimelineCard {
   description: string;
   tags: Array<string>;
   date: string;
+  navigateURL;
 }

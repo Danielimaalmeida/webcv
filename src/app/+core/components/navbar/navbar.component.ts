@@ -34,8 +34,9 @@ export class NavbarComponent implements OnInit, OnChanges {
   backgroundColor = 'none';
   routes: NavbarRoute[] = [
     { label: 'About', route: 'about', scroll: true },
-    { label: 'Quiz', route: 'quiz', scroll: false },
-    { label: 'Contact', route: 'contact', scroll: true }
+    { label: 'Timeline', route: 'timeline', scroll: true },
+    { label: 'Stack', route: 'stack', scroll: true },
+    { label: 'Quiz', route: 'quiz', scroll: false }
   ];
 
   constructor(private breakpointObserver: BreakpointObserver) { }

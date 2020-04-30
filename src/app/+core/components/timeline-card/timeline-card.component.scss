@@ -189,6 +189,10 @@
   color: white;
   line-height: 1.2;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   @include for-phone-only {
     width: 100px;
     height: 100px;

@@ -26,7 +26,7 @@ import { TimelineCard } from './../../model/timeline.model';
 })
 export class TimelineCardComponent {
 
-  @ViewChild('card', { static: false }) card: ElementRef;
+  @ViewChild('card') card: ElementRef;
 
   @Input() right: boolean;
   @Input() isFirst: boolean;
@@ -66,5 +66,9 @@ export class TimelineCardComponent {
       || el.contains(efp(rect.right, rect.bottom))
       || el.contains(efp(rect.left, rect.bottom))
     );
+  }
+
+  navigate(): void {
+    window.open(this.content.navigateURL, '_blank');
   }
 }

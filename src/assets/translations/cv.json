@@ -49,7 +49,8 @@
           "Typescript",
           "Jasmine"
         ],
-        "date": "2019 - Now"
+        "date": "2019 - Now",
+        "navigateURL":"https://www.cocus.de/en/home/"
       },
       {
         "company": "Critical Software",
@@ -62,7 +63,8 @@
           "JavaEE",
           "WebSphere"
         ],
-        "date": "2018 - 2019"
+        "date": "2018 - 2019",
+        "navigateURL":"https://www.criticalsoftware.com/"
       },
       {
         "company": "Switch",
@@ -76,7 +78,8 @@
           "Spring",
           "Docker"
         ],
-        "date": "2018 - 2019"
+        "date": "2018 - 2019",
+        "navigateURL":"https://portotechhub.com/switch/"
       },
       {
         "company": "236 Arquitectos",
