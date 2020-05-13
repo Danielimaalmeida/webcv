@@ -5,17 +5,17 @@
       <div [className]="'a-left-' + color"></div>
     </div>
     <div *ngIf="isVisible" [@enterAnimation] class="text-container">
-      <div class="position content-strong">{{content?.role}}</div>
-      <div class="date content">{{content?.date}}</div>
-      <div class="description content">{{content?.description}}</div>
+      <h5 class="position content-strong">{{content?.role}}</h5>
+      <h6 class="date">{{content?.date}}</h6>
+      <h6 class="description content">{{content?.description}}</h6>
       <div class="tags"><div class="tag" *ngFor="let tag of content?.tags">{{tag}}</div></div>
     </div>
 </div>
 
 <div #card *ngIf="right" class="timeline-card-right">
   <div *ngIf="isVisible" [@enterAnimation] class="text-container">
-    <div class="position content-strong">{{content?.role}}</div>
-    <div class="date content">{{content?.date}}</div>
+    <h5 class="position content-strong">{{content?.role}}</h5>
+    <h6 class="date content">{{content?.date}}</h6>
     <div class="description content">{{content?.description}}</div>
     <div class="tags"><div class="tag" *ngFor="let tag of content?.tags">{{tag}}</div></div>
   </div>

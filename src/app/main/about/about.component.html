@@ -1,5 +1,5 @@
 <div id="about" class="title-container">
-  <div class="title">About</div>
+  <h3>About</h3>
   <div class="bullet"></div>
 </div>
 <div class="about-container">
@@ -16,7 +16,7 @@
 <div class="logos-container">
   <div class="channel" *ngFor="let channel of language?.about.channels">
     <img class="icon" [src]="channel.imageURL">
-    <div class="content">{{channel.name}}</div>
+    <h6>{{channel.name}}</h6>
   </div>
 </div>
 

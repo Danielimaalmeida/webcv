@@ -1,0 +1,31 @@
+@import './breakpoints.scss';
+@import './colors.scss';
+
+.primary-button {
+  width: 100%;
+  min-height: 80px;
+  max-width: 400px;
+  border: 3px solid $yellow;
+  border-radius: 10px;
+  margin: auto;
+  background-color: transparent;
+  background-color: $yellow;
+  color: white;
+  font-weight: 700;
+  font-size: 70px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $oceanGreen;
+    border: 3px solid $oceanGreen;
+  }
+
+  @include for-phone-only {
+    font-size: 40px;
+    min-height: 65px;
+  }
+}

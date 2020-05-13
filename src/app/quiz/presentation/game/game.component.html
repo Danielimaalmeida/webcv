@@ -1,0 +1,17 @@
+<div *ngIf="currentQuestionIndex !== 9" class="game-container">
+    <div class="message">{{language?.quiz.question}}{{currentQuestion.name}}?</div>
+    <div class="answer-container">
+      <div #answers class="answer" *ngFor="let country of gameQuestions[currentQuestionIndex].questions; let i = index"
+      (click)="selectOption(country, i)">
+       {{country.capital}}
+      </div>
+    </div>
+</div>
+<div *ngIf="currentQuestionIndex === 9" class="game-container">
+  <div class="message">{{language?.quiz.result.total + correctQuestions + language?.quiz.result.outOf}}</div>
+  <h2 *ngIf="correctQuestions < 5">{{language?.quiz.result.bad}}</h2>
+  <h2 *ngIf="correctQuestions > 5 && correctQuestions < 8">{{language?.quiz.result.medium}}</h2>
+  <h2 *ngIf="correctQuestions >= 8">{{language?.quiz.result.great}}</h2>
+  <button (click)="tryAgain()" class="primary-button margin-top">AGAIN</button>
+</div>
+

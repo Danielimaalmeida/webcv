@@ -21,8 +21,8 @@
     </div>
   </div>
   <div class="title-box">
-    <div class="headline">{{language?.greetings}}</div>
-    <div class="headline-sub">{{language?.title}}</div>
+    <h1>{{language?.greetings}}</h1>
+    <h2>{{language?.title}}</h2>
   </div>
   <div>
     <div class="horizontal-bar"></div>
@@ -43,6 +43,6 @@
   </div>
 
 
-  <div *ngIf="arrowDisplay" [@enterAnimation] class="scroll">
+  <div *ngIf="!arrowHidden" [@enterAnimation] class="scroll">
     <div (click)="scrollDown()" class="arrow-down"></div>
   </div>

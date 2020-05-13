@@ -8,7 +8,7 @@
     <div class="circle-sm"></div>
     <div class="circle-sm"></div>
     <div class="title-container">
-      <div class="title">{{title}}</div>
+      <h3>{{title}}</h3>
       <div class="bullet"></div>
     </div>
     <div class="stack-container">
@@ -17,7 +17,7 @@
         <div *ngIf="stackContentList" class="interior">
          <div *ngFor="let tech of stackContentList" class="tech-container">
           <img class="tech-icon" src="{{tech.imageURL}}" alt="{{tech.alt}}">
-          <div class="content-strong">{{tech.name}}</div>
+          <h5>{{tech.name}}</h5>
          </div>
         </div>
         <div class="button"><div></div></div>

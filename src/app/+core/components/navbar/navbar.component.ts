@@ -1,11 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
 import { trigger, state, style } from '@angular/animations';
+import { Router } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
 import { NavbarRoute } from './../../model/navbar.model';
 import { scrollTo } from '../../utils';
 
-const openHeight = '228px';
+const openHeight = '279px';
 const closeHeight = '70px';
 const closePhoneHeight = '60px';
 
@@ -39,7 +40,7 @@ export class NavbarComponent implements OnInit, OnChanges {
     { label: 'Quiz', route: 'quiz', scroll: false }
   ];
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) { }
 
   ngOnInit(): void {
     this.observeScreenSize();
@@ -68,6 +69,8 @@ export class NavbarComponent implements OnInit, OnChanges {
     const { scroll, route } = routItem;
     if (scroll) {
       scrollTo(route);
+    } else {
+      this.router.navigate([route]);
     }
   }
 

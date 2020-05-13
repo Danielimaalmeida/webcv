@@ -1,92 +1,23 @@
-$bodyColor: #42228f;
-$oceanGreen: #3ec1c9;
-$yellow: #f0d68a;
-$darkblue: #3b2081;
-$pink: #f64ea3;
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@import "~@angular/material/theming";
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$dan-app-primary: mat-palette($mat-indigo);
-$dan-app-accent: mat-palette($mat-pink, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$dan-app-warn: mat-palette($mat-red);
-
-// Create the theme object (a Sass map containing all of the palettes).
-$dan-app-theme: mat-light-theme(
-  $dan-app-primary,
-  $dan-app-accent,
-  $dan-app-warn
-);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($dan-app-theme);
-
-/* You can add global styles to this file, and also import other style files */
+@import './theme/buttons.scss';
+@import './theme/breakpoints.scss';
+@import './theme/colors.scss';
 
 html,
 body {
   line-height: normal;
   height: 100%;
   background-color: $bodyColor;
-}
-body {
-  margin: 0;
   font-family: Barlow, "Helvetica Neue", sans-serif;
-}
-
-@mixin for-small-phone {
-  @media (max-width: 320px) {
-    @content;
-  }
-}
-@mixin for-phone-only {
-  @media (max-width: 576px) {
-    @content;
-  }
-}
-@mixin for-tablet {
-  @media (max-width: 768px) {
-    @content;
-  }
-}
-@mixin for-tablet-pro {
-  @media (max-width: 992px) {
-    @content;
-  }
-}
-@mixin for-desktop {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-@mixin for-big-desktop {
-  @media (min-width: 1800px) {
-    @content;
-  }
+  margin: 0;
 }
 
 /******** Text styles **********/
-
-.headline {
-  font-family: "Barlow", sans-serif;
+h1 {
   display: block;
   font-size: 120px;
   line-height: normal;
   font-weight: 900;
+  margin: 0;
 
   @include for-tablet {
     font-size: 90px;
@@ -97,74 +28,74 @@ body {
   }
 }
 
-.headline-sub {
-  font-family: "Barlow", sans-serif;
+h2 {
   display: block;
   font-size: 30px;
   line-height: normal;
   font-weight: 500;
+  margin: 0;
 
   @include for-tablet {
     font-size: 22px;
   }
 }
 
-.title {
-  font-family: "Barlow", sans-serif;
+h3 {
   display: block;
   font-size: 60px;
   line-height: normal;
   font-weight: bold;
+  margin: 0;
 
   @include for-tablet {
     font-size: 46px;
   }
 }
 
-.content-title {
-    font-family: "Barlow", sans-serif;
-    display: block;
-    font-size: 26px;
-    line-height: normal;
-    font-weight: bold;
+h4 {
+  display: block;
+  font-size: 26px;
+  line-height: normal;
+  font-weight: bold;
+  margin: 0;
 
-    @include for-tablet {
-      font-size: 23px;
-    }
+  @include for-tablet {
+    font-size: 23px;
+  }
 }
 
-.content-strong {
-  font-family: "Barlow", sans-serif;
+h5 {
   display: block;
   font-size: 18px;
   line-height: normal;
   font-weight: bold;
+  margin: 0;
 
   @include for-phone-only {
     font-size: 14px;
   }
 }
 
-.content {
-  font-family: "Barlow", sans-serif;
+h6 {
   display: block;
   font-size: 16px;
   line-height: normal;
   font-weight: 200;
+  margin: 0;
 }
 
 /*** Geometric Objects ***/
 
 .tag {
   border: 1px solid white;
-    min-width: 70px;
-    min-height: 20px;
-    margin: 5px 5px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-size: 12px;
-    border-radius: 10px;
+  min-width: 70px;
+  min-height: 20px;
+  margin: 5px 5px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  border-radius: 10px;
 }
 
 .bullet {
@@ -266,32 +197,78 @@ body {
 
 /*** Animation ***/
 @keyframes ColorChange {
-  0% {color: $yellow;}
-  50% {color: $oceanGreen;}
-  100% {color: $pink;}
+  0% {
+    color: $yellow;
+  }
+
+  50% {
+    color: $oceanGreen;
+  }
+
+  100% {
+    color: $pink;
+  }
 }
 
 @keyframes BackgroundColorChange {
-  0% {background-color: $yellow; color: $yellow;}
-  50% {background-color: $oceanGreen; color: $oceanGreen;}
-  100% {background-color: $pink; color: $pink;}
+  0% {
+    background-color: $yellow;
+    color: $yellow;
+  }
+
+  50% {
+    background-color: $oceanGreen;
+    color: $oceanGreen;
+  }
+
+  100% {
+    background-color: $pink;
+    color: $pink;
+  }
 }
 
 @keyframes Pan {
-  0% {transform: translate(0,0)}
-  50% {transform: translate(-200px,0)}
-  100% {transform: translate(0,0)}
+  0% {
+    transform: translate(0, 0)
+  }
+
+  50% {
+    transform: translate(-200px, 0)
+  }
+
+  100% {
+    transform: translate(0, 0)
+  }
 }
 
-@keyframes Panextended{
-  0% {transform: translate(0,0)}
-  25% {transform: translate(150px,0)}
-  50% {transform: translate(0,-50px)}
-  75% {transform: translate(0, 50px)}
-  100% {transform: translate(150px,0)}
+@keyframes Panextended {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  25% {
+    transform: translate(150px, 0)
+  }
+
+  50% {
+    transform: translate(0, -50px)
+  }
+
+  75% {
+    transform: translate(0, 50px)
+  }
+
+  100% {
+    transform: translate(150px, 0)
+  }
 }
 
 @keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

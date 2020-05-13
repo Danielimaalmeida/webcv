@@ -1,0 +1,2 @@
+<da-welcome *ngIf="!displayGame" [language]="languageFile$ | async" (initializeGameEmitter)="initializeGame()"></da-welcome>
+<da-game *ngIf="displayGame" [language]="languageFile$ | async" [countries]="countries$ | async" (tryAgainEmitter)="handleTryAgain()"></da-game>

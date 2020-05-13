@@ -28,7 +28,7 @@
   color: white;
   width: 85%;
   margin: 50px auto auto auto;
-  .title {
+  h3 {
     margin: 0 0 20px 20px;
   }
 
@@ -37,7 +37,7 @@
   }
 
   @include for-phone-only {
-    .title {
+    h3 {
       margin: 0 0 20px 0;
     }
   }

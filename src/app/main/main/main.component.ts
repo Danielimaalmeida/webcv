@@ -1,6 +1,6 @@
-import { AboutComponent } from './../about/about.component';
+import { ScrollService } from './../../+core/services/scroll.service';
 import { LanguageFacade } from './../../+core/languages/language.facade';
-import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -13,19 +13,14 @@ export class MainComponent implements OnInit {
   @ViewChild('about') about: ElementRef;
 
   languageFile$: Observable<any>;
-  scrolleDown = false;
+  scrollDown$: Observable<boolean>;
 
-  constructor(private languageFacade: LanguageFacade) {
-    this.languageFile$ = languageFacade.language$;
+  constructor(private languageFacade: LanguageFacade, private scrollService: ScrollService) {
+    this.languageFile$ = this.languageFacade.language$;
+    this.scrollDown$ = this.scrollService.isScrollingDown();
   }
 
   ngOnInit(): void {
     this.languageFacade.get();
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event) {
-    const verticalOffset = window.pageYOffset || 0;
-    this.scrolleDown = !!verticalOffset;
   }
 }

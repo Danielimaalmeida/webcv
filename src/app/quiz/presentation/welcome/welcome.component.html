@@ -1,0 +1,13 @@
+<div class="welcome-container">
+  <ng-container *ngIf="!countdown">
+    <div [@enterAnimation] class="message">{{language?.quiz.welcome}}</div>
+    <h2 [@enterAnimation]>{{language?.quiz.type}}</h2>
+    <input [formControl]="name" class="name-input">
+    <button (click)="onPLayClick()"class="primary-button">PLAY</button>
+  </ng-container>
+  <ng-container *ngIf="countdown">
+    <div [@enterAnimation] class="message">{{language?.quiz.prepare}}</div>
+    <h2 [@enterAnimation]>{{language?.quiz.tip}}</h2>
+    <div class="countdown"><div class="counter">{{counter}}</div></div>
+  </ng-container>
+</div>

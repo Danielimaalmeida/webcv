@@ -24,14 +24,16 @@ import { scrollTo } from 'src/app/+core/utils';
 export class HomeComponent implements OnInit {
 
   @Input() language: any;
-  @Input() arrowDisplay = true;
+  @Input() arrowHidden = true;
 
   paddingTop: string;
   index = 0;
 
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.language)
+  }
 
   setPaddingTop(paddingTop: string) {
     this.paddingTop = paddingTop;
@@ -40,5 +42,4 @@ export class HomeComponent implements OnInit {
   scrollDown(): void {
     scrollTo('about');
   }
-
 }

@@ -1,0 +1,121 @@
+@import './../../../../theme/breakpoints.scss';
+@import './../../../../theme/colors.scss';
+
+.game-container {
+  display: flex;
+  justify-content: center;
+  padding: 150px 0;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+
+  @include for-phone-only {
+    padding: 150px 6%;
+  }
+
+  @include for-small-phone {
+    padding: 100px 6%;
+  }
+
+  .message {
+    font-size: 80px;
+    font-weight: 700;
+    text-align: center;
+
+    @include  for-tablet-pro {
+      font-size: 60px;
+    }
+
+    @include  for-phone-only {
+      font-size: 35px;
+    }
+  }
+}
+
+.answer-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  min-height: 300px;
+  margin: 2em auto auto auto;
+  justify-content: space-between;
+
+  .answer {
+    height: 110px;
+    display: flex;
+    min-width: 500px;
+    align-items: center;
+    font-size: 40px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0px 15px;
+
+    &:hover {
+      color: $yellow;
+      border: 2px solid $yellow;
+      cursor: pointer;
+    }
+
+    @include to-laptop {
+      min-width: 400px;
+    }
+
+    @include for-tablet {
+      margin: 10px 0;
+    }
+
+    @include for-phone-only {
+      min-width: 90%;
+      height: 70px;
+      font-size: 34px;
+    }
+  }
+
+  @include to-laptop {
+    max-width: 900px;
+  }
+
+  @include for-tablet-pro{
+    justify-content: center;
+  }
+}
+
+.correct {
+  background-color: $oceanGreen;
+  &:hover {
+    border: 2px solid white !important;
+    color: white !important;
+  }
+}
+
+.wrong {
+  background-color: #a12b4e;
+  &:hover {
+    border: 2px solid white !important;
+    color: white !important;
+  }
+}
+
+.deactivated {
+  color: rgb(143, 143, 143);
+  border: 2px solid rgb(143, 143, 143) !important;
+  &:hover {
+    color: rgb(143, 143, 143) !important;
+    border: 2px solid rgb(143, 143, 143) !important;
+    cursor: default !important;
+  }
+}
+
+.animate {
+  animation: blink 200ms linear 5;
+}
+
+.margin-top {
+  margin-top: 1em;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
