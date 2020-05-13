@@ -32,11 +32,11 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.nameFormChanges();
-    this.initializeCountdown();
   }
 
   onPLayClick(): void {
     this.countdown = true;
+    this.initializeCountdown();
   }
 
   initializeCountdown(): void {
