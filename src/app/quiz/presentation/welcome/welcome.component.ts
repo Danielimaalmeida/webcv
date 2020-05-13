@@ -40,7 +40,7 @@ export class WelcomeComponent implements OnInit {
   }
 
   initializeCountdown(): void {
-    const time = 7;
+    const time = 6;
     const timer$ = interval(1000);
     timer$.pipe(
       take(time),

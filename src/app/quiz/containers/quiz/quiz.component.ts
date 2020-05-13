@@ -24,11 +24,11 @@ export class QuizComponent implements OnInit {
 
   ngOnInit(): void {
     this.languageFacade.get();
-    this.countriesFacade.getCountries();
   }
 
   initializeGame(): void {
     this.displayGame = true;
+    this.countriesFacade.getCountries();
   }
 
   handleTryAgain(): void {
