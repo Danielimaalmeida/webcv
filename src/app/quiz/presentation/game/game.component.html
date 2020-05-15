@@ -1,4 +1,4 @@
-<div *ngIf="currentQuestionIndex !== 9" class="game-container">
+<div *ngIf="currentQuestionIndex !== 9 && currentQuestion" class="game-container">
     <div class="message">{{language?.quiz.question}}{{currentQuestion.name}}?</div>
     <div class="answer-container">
       <div #answers class="answer" *ngFor="let country of gameQuestions[currentQuestionIndex].questions; let i = index"

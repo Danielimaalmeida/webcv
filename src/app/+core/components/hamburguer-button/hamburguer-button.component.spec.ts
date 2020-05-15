@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HamburguerButtonComponent } from './hamburguer-button.component';
@@ -8,6 +9,7 @@ describe('HamburguerButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [BrowserAnimationsModule],
       declarations: [ HamburguerButtonComponent ]
     })
     .compileComponents();
