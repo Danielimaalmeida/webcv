@@ -2,6 +2,14 @@ import { Component, OnChanges, Input, ViewChildren, QueryList, ElementRef, Outpu
 import { ICountry } from '../../api/entities/country.model';
 import { ISingleQuestion } from './../../api/entities/country.model';
 
+enum classNames {
+  ANIMATE = 'animate',
+  WRONG_ANIMATED = 'answer wrong animate',
+  DEACTIVATED = 'answer deactivated',
+  IDLE = 'answer'
+
+}
+
 @Component({
   selector: 'da-game',
   templateUrl: './game.component.html',
@@ -59,13 +67,18 @@ export class GameComponent implements OnChanges {
     this.tryAgainEmitter.emit();
   }
 
+  /**
+   * Moves to the next question of the array.
+   */
   private nextQuestion(): void {
     this.areAnswersBlocked = false;
     if (this.currentQuestionIndex < 10) {
       this.currentQuestionIndex++;
       const { questions } = this.gameQuestions[this.currentQuestionIndex];
-      this.currentQuestion = questions[0];
+      const index = Math.floor(Math.random() * questions.length);
+      this.currentQuestion = questions[index];
     }
+    this.resetAnswerStyles();
   }
 
   /**
@@ -76,7 +89,7 @@ export class GameComponent implements OnChanges {
    * @param isAnimated If true, the element is animated with a blink. if false the element is only highlighted.
    */
   private highlightCorrectAnswer(element?: ElementRef, isAnimated?: boolean): void {
-    const withAnimation = isAnimated ? 'animate' : '';
+    const withAnimation = isAnimated ? classNames.ANIMATE : '';
     if (!element) {
       const correctQuestionIndex = this.findCorrectAnswer();
       element = this.answers.find((el: ElementRef, index: number) => {
@@ -92,7 +105,7 @@ export class GameComponent implements OnChanges {
    * @param element ElementRef to change
    */
   private highlightWrongAnswer(element: ElementRef): void {
-    element.nativeElement.className = 'answer wrong animate';
+    element.nativeElement.className = classNames.WRONG_ANIMATED;
   }
 
   /**
@@ -101,7 +114,16 @@ export class GameComponent implements OnChanges {
    * @param element ElementRef to change
    */
   private deactivateAnswer(element: ElementRef): void {
-    element.nativeElement.className = 'answer deactivated';
+    element.nativeElement.className = classNames.DEACTIVATED;
+  }
+
+  /**
+   * Resets the quiz answer styles
+   */
+  private resetAnswerStyles(): void {
+    this.answers.forEach((answer: ElementRef) => {
+      answer.nativeElement.className = classNames.IDLE;
+    });
   }
 
   /**
@@ -113,7 +135,8 @@ export class GameComponent implements OnChanges {
       this.gameQuestions.push(this.prepareQuestions());
     }
     const { questions } = this.gameQuestions[this.currentQuestionIndex];
-    this.currentQuestion = questions[0];
+    const index = Math.floor(Math.random() * questions.length);
+    this.currentQuestion = questions[index];
   }
 
   /**
@@ -136,7 +159,7 @@ export class GameComponent implements OnChanges {
       }
     }
 
-    return { questions: this.shuffle(countryQuestions) };
+    return { questions: countryQuestions };
   }
 
   /**
@@ -163,23 +186,5 @@ export class GameComponent implements OnChanges {
     return answers.questions.findIndex((answer: ICountry) => {
       return answer.capital === this.currentQuestion.capital;
     });
-  }
-
-  shuffle(questions: Array<ICountry>): Array<ICountry> {
-    let currentIndex = questions.length;
-    let temporaryValue;
-    let randomIndex;
-
-    while (0 !== currentIndex) {
-
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-
-      temporaryValue = questions[currentIndex];
-      questions[currentIndex] = questions[randomIndex];
-      questions[randomIndex] = temporaryValue;
-    }
-
-    return questions;
   }
 }

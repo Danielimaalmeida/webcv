@@ -16,7 +16,8 @@ import { GameComponent } from './presentation/game/game.component';
     CoreModule,
     QuizRoutingModule,
     ReactiveFormsModule
-  ]
+  ],
+  exports: [QuizComponent]
 })
 
 export class QuizModule {

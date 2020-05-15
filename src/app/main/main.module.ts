@@ -8,6 +8,7 @@ import { CoreModule } from '../+core/+core.module';
 import { MainRoutingModule } from './main-routing.module';
 import { TimelineComponent } from './timeline/timeline.component';
 import { StackComponent } from './stack/stack.component';
+import { QuizModule } from '../quiz/quiz.module';
 
 
 
@@ -17,7 +18,8 @@ import { StackComponent } from './stack/stack.component';
   imports: [
     CommonModule,
     CoreModule,
-    MainRoutingModule
+    MainRoutingModule,
+    QuizModule
   ],
   exports: [HomeComponent, AboutComponent]
 })

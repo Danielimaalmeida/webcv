@@ -31,7 +31,6 @@ export class WelcomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.nameFormChanges();
   }
 
   onPLayClick(): void {
@@ -51,9 +50,5 @@ export class WelcomeComponent implements OnInit {
           this.initializeGameEmitter.emit();
         }
       });
-  }
-
-  private nameFormChanges(): void {
-    this.name.valueChanges.subscribe(cenas => console.log(cenas));
   }
 }

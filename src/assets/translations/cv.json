@@ -142,6 +142,7 @@
   "quiz": {
     "welcome": "Let's try your geography knowledge!",
     "type": "Type your name and click Play. Or just play.",
+    "prepareWithName": " ,prepare yourself!",
     "prepare": "Prepare yourself!",
     "tip": "Try to get 10 out of 10.",
     "question": "What is the capital of ",

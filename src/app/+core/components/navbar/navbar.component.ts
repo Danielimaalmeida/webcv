@@ -30,6 +30,7 @@ const closePhoneHeight = '60px';
 export class NavbarComponent implements OnInit, OnChanges {
   @Output() navbarSize: EventEmitter<string> = new EventEmitter();
   @Input() scrolledDown: boolean;
+
   opened: boolean;
   smartphone = false;
   backgroundColor = 'none';
@@ -64,11 +65,17 @@ export class NavbarComponent implements OnInit, OnChanges {
     });
   }
 
+  navigateToGibHub(): void {
+    window.open('https://github.com/Danielimaalmeida/webcv', '_blank');
+  }
 
   navigate(routItem: NavbarRoute): void {
     const { scroll, route } = routItem;
     if (scroll) {
-      scrollTo(route);
+      this.router.navigate(['main']);
+      setTimeout(() => {
+        scrollTo(route);
+      }, 100);
     } else {
       this.router.navigate([route]);
     }

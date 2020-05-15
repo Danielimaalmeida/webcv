@@ -6,7 +6,8 @@
     <button (click)="onPLayClick()"class="primary-button">PLAY</button>
   </ng-container>
   <ng-container *ngIf="countdown">
-    <div [@enterAnimation] class="message">{{language?.quiz.prepare}}</div>
+    <div *ngIf="name.value" [@enterAnimation] class="message">{{name.value}}{{language?.quiz.prepareWithName}}</div>
+    <div *ngIf="!name.value" [@enterAnimation] class="message">{{language?.quiz.prepare}}</div>
     <h2 [@enterAnimation]>{{language?.quiz.tip}}</h2>
     <div class="countdown"><div class="counter">{{counter}}</div></div>
   </ng-container>
