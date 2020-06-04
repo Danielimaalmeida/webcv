@@ -47,6 +47,7 @@
   margin: 150px 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
   .channel {
     display: flex;
@@ -54,10 +55,15 @@
     min-width: 250px;
     text-align: center;
     color: white;
+    margin: 20px 0;
 
     .icon {
       height: 80px;
       margin-bottom: 15px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     >div {

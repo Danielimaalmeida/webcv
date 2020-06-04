@@ -33,6 +33,12 @@
         "imageURL": "./../../../assets/icons/email.svg",
         "alt": "Email icon",
         "name": "danielimalmeida@gmail.com"
+      },
+      {
+        "imageURL": "./../../../assets/icons/medium.svg",
+        "alt": "Medium icon",
+        "name": "medium.com/@danielimalmeida",
+        "link": "https://medium.com/@danielimalmeida"
       }
     ]
   },
