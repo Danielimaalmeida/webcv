@@ -21,9 +21,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-color: $yellow;
   display: flex;
-  animation: BackgroundColorChange 15000ms linear infinite alternate-reverse;
 }
 
 .middle-container>div:nth-child(1) {
@@ -47,6 +45,7 @@
   display: flex;
   color: white;
   padding: 0 10px 0 10px;
+  margin-bottom: 50px;
   .h3 {
     margin: 20px 0 20px 20px;
   }
@@ -150,7 +149,7 @@
     margin: auto;
     width: 90%;
     height: 90%;
-    background-color: $pink;
+    animation: BackgroundColorChange 15000ms linear infinite alternate-reverse;
     display: flex;
     flex-flow: row wrap;
   }
