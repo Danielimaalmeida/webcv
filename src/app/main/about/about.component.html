@@ -15,7 +15,7 @@
 </div>
 <div class="logos-container">
   <div class="channel" *ngFor="let channel of language?.about.channels">
-    <img class="icon" [src]="channel.imageURL">
+    <img class="icon" [src]="channel.imageURL" (click)="navigate(channel.link)">
     <h6>{{channel.name}}</h6>
   </div>
 </div>

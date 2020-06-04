@@ -26,7 +26,8 @@
       {
         "imageURL": "./../../../assets/icons/linkdin.svg",
         "alt": "Linkdin icon",
-        "name": "/in/danielimalmeida"
+        "name": "/in/danielimalmeida",
+        "link": "https://www.linkedin.com/in/danielimalmeida"
       },
       {
         "imageURL": "./../../../assets/icons/email.svg",

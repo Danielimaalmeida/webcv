@@ -17,4 +17,10 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  navigate(link: string): void {
+    if (link) {
+      window.open(link, '_blank');
+    }
+  }
+
 }
