@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -49,7 +49,7 @@ export class HamburguerButtonComponent {
 
   @Output() hamburgerIsOpen: EventEmitter<boolean> = new EventEmitter()
 
-  isOpen = false;
+  @Input() isOpen = false;
 
   constructor() { }
 

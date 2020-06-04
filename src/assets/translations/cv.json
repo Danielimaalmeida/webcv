@@ -6,7 +6,7 @@
     "cards": [
       {
         "title": "technology",
-        "text": "Technology guided my educational path. The possibilities of the emerging digital processes motivated my research as an Architect and made me persuit an education and career in Software Engineering."
+        "text": "Technology guided my educational path. The possibilities of the emerging digital processes motivated my research as an Architect and made me pursuit an education and career in Software Engineering."
       },
       {
         "title": "design",
@@ -14,7 +14,7 @@
       },
       {
         "title": "animals",
-        "text": "I love my Cats and I love my Dogs. They are part of my family and help me handle the natural stress that comes with role of a Software Developer."
+        "text": "I love my cats and I love my dogs. They are part of my family and help me handle the natural stress that comes with the role of a Software Developer."
       }
     ],
     "channels": [
@@ -142,7 +142,7 @@
   "quiz": {
     "welcome": "Let's try your geography knowledge!",
     "type": "Type your name and click Play. Or just play.",
-    "prepareWithName": " ,prepare yourself!",
+    "prepareWithName": ", prepare yourself!",
     "prepare": "Prepare yourself!",
     "tip": "Try to get 10 out of 10.",
     "question": "What is the capital of ",
@@ -150,7 +150,7 @@
       "total": "You got ",
       "outOf": " out of 10!",
       "bad": "You can do better than this. Wanna give it another try?",
-      "medium": "Nice job job. Wanna give it another try?",
+      "medium": "Nice job. Wanna give it another try?",
       "great": "Congratulations!"
     }
   }

@@ -8,10 +8,10 @@
 <!-- Smartphone -->
 <div *ngIf="smartphone" class="navbar-container" [@openClose]="opened ? 'open' : 'closed'" [ngStyle]="{'background-color': backgroundColor }">
   <div *ngIf="smartphone" class="burger-wrapper">
-    <app-hamburguer-button style="margin:auto" (hamburgerIsOpen)="toggleNavbar($event)"></app-hamburguer-button>
+    <app-hamburguer-button style="margin:auto" [isOpen]="opened" (hamburgerIsOpen)="toggleNavbar($event)"></app-hamburguer-button>
   </div>
   <div [className]="opened ? 'route with-border' : 'route'" *ngFor="let route of routes" (click)="navigate(route)">
-    <span [className]="opened ? 'route-text' : 'route-text-hidden'">{{route.label}}</span>
+    <span [className]="opened ? 'route-text' : 'route-text-hidden'" (click)="toggleNavbar(false)">{{route.label}}</span>
   </div>
 </div>
 
