@@ -46,15 +46,17 @@ export class GameComponent implements OnChanges {
     this.areAnswersBlocked = true;
     if (this.areAnswersBlocked) {
       this.answers.forEach((answer: ElementRef, i: number) => {
-        const capitalsMatch = selectedOption.capital === this.currentQuestion.capital;
+        const { capital } = this.currentQuestion;
+        const capitalsMatch = selectedOption.capital === capital;
+        const innerText = answer.nativeElement.innerText;
+
         if (capitalsMatch && index === i) {
           this.correctQuestions++;
           this.highlightCorrectAnswer(answer, true);
         } else if (!capitalsMatch && index === i) {
           this.highlightWrongAnswer(answer);
-          this.highlightCorrectAnswer();
-        } else {
-          this.deactivateAnswer(answer);
+        } else if (!capitalsMatch && innerText === capital.toUpperCase()) {
+          this.highlightCorrectAnswer(answer, false);
         }
       });
       setTimeout(() => {
@@ -95,8 +97,9 @@ export class GameComponent implements OnChanges {
       element = this.answers.find((el: ElementRef, index: number) => {
         return index === correctQuestionIndex;
       });
+    } else {
+      element.nativeElement.className = `answer correct ${withAnimation}`;
     }
-    element.nativeElement.className = `answer correct ${withAnimation}`;
   }
 
   /**
