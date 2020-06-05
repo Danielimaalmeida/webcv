@@ -1,6 +1,7 @@
 {
   "greetings": "Hi!",
   "title": "My name is Daniel Almeida and I'm a Frontend Developer",
+  "export": "Export PDF CV",
   "about": {
     "title": "About",
     "cards": [

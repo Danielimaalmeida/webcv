@@ -3,7 +3,7 @@
 .stack {
   display: flex;
   width: 100%;
-  margin: 100px 0;
+  margin: 100px 0 0 0;
 
   @include for-phone-only {
     margin-top: 50px;

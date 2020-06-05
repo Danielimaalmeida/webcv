@@ -1,0 +1,22 @@
+.download-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+  .download-icon {
+    margin: auto;
+    width: 50px;
+    padding: 50px 0 10px 0;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.download-text {
+  color: white;
+  text-align: center;
+  padding: 0 0 50px 0;
+}

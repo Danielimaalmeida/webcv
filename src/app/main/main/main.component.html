@@ -2,4 +2,10 @@
 <app-about [language]="languageFile$ | async"></app-about>
 <app-timeline [language]="languageFile$ | async"></app-timeline>
 <app-stack [language]="languageFile$ | async"></app-stack>
+<div class="download-container">
+    <img class="download-icon" (click)="exportCV()" src="./../../../assets/icons/arrow-download.svg" alt="Export icon">
+</div>
+<h5 class="download-text">{{(languageFile$ | async)?.export}}</h5>
+
+
 <router-outlet></router-outlet>

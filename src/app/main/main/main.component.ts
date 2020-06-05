@@ -23,4 +23,8 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.languageFacade.get();
   }
+
+  exportCV(): void {
+    window.open('./../../../assets/docs/CV.pdf', '_blank');
+  }
 }
